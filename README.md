@@ -1,102 +1,100 @@
-# job-search-engine-IR
-Hybrid Sparse–Dense Job Search Engine (BM25 + Embeddings)
+# Hybrid Job Search Engine: BM25 + Dense Retrieval
 
----
+A Python information retrieval system for ranking job postings using custom BM25/BM25F-style weighted-field scoring, sentence-transformer embeddings, and hybrid score fusion.
 
-## Team Members
-- Nikhil Malige
-- Pravinesh Gowrypalan
-- Skarlin Salazar
-- Oscar Gallegos
+## Why this project matters
 
----
+Job search is vulnerable to lexical mismatch: a candidate might search for "backend Python API developer" while a relevant posting uses terms like "server-side engineer", "REST services", or "Django". Pure keyword retrieval is strong for exact skills and technologies, but it can miss semantically related wording. Dense retrieval helps capture meaning beyond exact token overlap, while hybrid retrieval combines both signals to improve early precision without losing the reliability of lexical matching.
 
-# Hybrid Job Search Engine (Information Retrieval Project)
-This project implements a hybrid sparse–dense search engine for job retrieval, developed as part of the ECS736P Information Retrieval module.
+## Key Features
 
-The system retrieves and ranks job postings based on user queries by combining:
-- **Lexical matching (BM25F)**
-- **Semantic similarity (Transformer embeddings)**
-- **Hybrid score fusion**
+- Field-weighted BM25-style sparse retrieval
+- Sentence-transformer dense retrieval
+- Hybrid linear score fusion
+- Manual relevance judgements
+- IR evaluation with P@5, nDCG@10, and MRR
+- Reproducible results saved to `results/`
 
----
+## Repository Structure
 
-## Hybrid Search Engine Features
-- Search using free-text queries (e.g., "python developer with REST API")
-- Combines:
-  - BM25 (exact keyword matching)
-  - Dense embeddings (semantic understanding)
-- Hybrid ranking using weighted score fusion
-- Evaluation with:
-  - nDCG@10 (primary metric)
-  - Precision@k
-  - Mean Reciprocal Rank (MRR)
-- Queries include:
-  - Keyword-based
-  - Descriptive
-  - Semantically varied
+```text
+data/        Job posting dataset
+src/         Retrieval and interactive search code
+evaluation/  Queries, relevance judgements, and evaluation scripts
+results/     Generated metrics and visualisations
+```
 
----
+## Methodology
 
-## System Architecture
+The sparse retriever applies a custom BM25-style scoring approach over structured job fields, giving higher influence to fields such as titles, keywords, skills, and responsibilities. This helps preserve exact matching for important job-search terms such as programming languages, frameworks, and role names.
 
-  User Query
-  
-       ↓ 
-       
-BM25 + Dense Retrieval
+The dense retriever represents job postings and queries with sentence-transformer embeddings, then ranks postings by cosine similarity. This captures semantic similarity when relevant postings use different wording from the query.
 
-       ↓
-       
-  Score Fusion
-  
-       ↓     
+The hybrid model combines normalized sparse and dense scores with linear fusion:
 
-Ranked Job Results
+```text
+hybrid_score = alpha * BM25 + (1 - alpha) * Dense
+```
 
----
+`alpha` is the BM25 weight. Higher `alpha` values place more emphasis on lexical matching; lower values place more emphasis on dense semantic similarity.
 
-## Project Structure
+## Results
 
-- data/ # Dataset (job postings)
-- src/ # Core retrieval system
-- evaluation/ # Metrics and evaluation
-- requirements.txt
-- README.md
+| Model | P@5 | nDCG@10 | MRR |
+| --- | ---: | ---: | ---: |
+| BM25 | 0.680 | 0.873 | 0.770 |
+| Hybrid | 0.700 | 0.870 | 0.920 |
+| Dense | 0.600 | 0.747 | 0.664 |
 
----
+BM25 achieved the best average nDCG@10, while Hybrid achieved the best P@5 and MRR. Dense retrieval alone was weaker, likely because the embedding model was not domain fine-tuned. Overall, the results support the idea that hybrid retrieval can improve early precision while BM25 remains strong for skill-sensitive job search.
 
-## Installation
+![Average retrieval metrics](results/average_metrics.png)
 
-1. Clone repository:
+![nDCG by query](results/ndcg_by_query.png)
 
-      - git clone https://github.com/oscar5198/job-search-engine-IR.git
+## How to Run
 
-      - cd job-search-engine-ir
+Create and activate a virtual environment:
 
-2. Install Dependencies:
-   
-      - pip install -r requirements.txt
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
----
+Install dependencies:
 
-## Usage
+```powershell
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
 
-### Run Interactive Search Engine
- - python src/search.py
+Run interactive search:
 
-### Evaluate All Models
-Run this after modifying BM25, dense retrieval, or hybrid fusion to assess performance:
+```powershell
+python src/search.py
+```
 
- - python evaluation/evaluate_all_models.py
+Run evaluation:
 
----
+```powershell
+python evaluation/evaluate_all_models.py
+```
 
-## Technologies Used
-- Python
-- rank-bm25
-- sentence-transformers
-- FAISS
-- NumPy / Pandas
-- scikit-learn
-- NLTK
+## Limitations
+
+- Small manually judged query set
+- Synthetic/structured dataset
+- First run requires model download
+- No domain fine-tuning
+
+## Future Improvements
+
+- Larger judgement set
+- Cross-encoder reranking
+- Domain fine-tuned embeddings
+- Web interface
+- Larger real-world job dataset
+
+## Skills Demonstrated
+
+Python, Information Retrieval, BM25, Dense Retrieval, Hybrid Search, Evaluation Metrics, Sentence Transformers, pandas, scikit-learn.

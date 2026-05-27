@@ -7,21 +7,9 @@ def load_qrels(path):
     """
     qrels_df = pd.read_csv(path)
 
-    # Make sure column names are correct
-    if "JobID" not in qrels_df.columns:
-        raise ValueError("CSV must have a 'JobID' column")
+    required_columns = ["query_id", "JobID", "relevance"]
+    missing = [column for column in required_columns if column not in qrels_df.columns]
+    if missing:
+        raise ValueError(f"Qrels CSV missing columns: {missing}")
 
-    # Convert to list of relevant doc IDs per query
-    qrels_dict = {}
-    for _, row in qrels_df.iterrows():
-        qid = row['query_id']
-        doc_id = row['JobID']
-        relevance = row['relevance']
-
-        if qid not in qrels_dict:
-            qrels_dict[qid] = []
-        if relevance == 1:
-            qrels_dict[qid].append(doc_id)
-
-    return qrels_df  # or return qrels_dict if you prefer
-    
+    return qrels_df[required_columns].copy()

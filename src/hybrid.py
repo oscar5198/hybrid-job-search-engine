@@ -10,9 +10,9 @@ _this_dir = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(_this_dir, "..", "data", "job_dataset.csv")
 MODEL_NAME = "all-MiniLM-L6-v2"
 TOP_K = 15  # top results to show
-ALPHA = 0.5  # BM25 vs Dense weight
+ALPHA = 0.5  # BM25 weight; dense weight is 1 - alpha
 
-# Score fusion
+# Score fusion: hybrid = alpha * BM25_normalized + (1 - alpha) * dense_normalized.
 def _normalise_scores(score_dict: dict[int, float]) -> dict[int, float]:
     if not score_dict:
         return {}
@@ -23,6 +23,7 @@ def _normalise_scores(score_dict: dict[int, float]) -> dict[int, float]:
     return {doc_id: float((score - min_v) / (max_v - min_v)) for doc_id, score in score_dict.items()}
 
 def fuse_scores(bm25_results, dense_results, alpha=ALPHA, top_k=TOP_K):
+    """Fuse normalized sparse and dense scores. Alpha is the BM25 weight."""
     bm25_norm = _normalise_scores(dict(bm25_results))
     dense_norm = _normalise_scores(dict(dense_results))
     all_doc_ids = set(bm25_norm.keys()) | set(dense_norm.keys())
@@ -48,14 +49,14 @@ class HybridSearchEngine:
         self.df = load_dataset(self.data_path)
         print(f"Dataset loaded: {len(self.df)} jobs\n", flush=True)
 
-        print("Preprocessing corpus for BM25 …", flush=True)
+        print("Preprocessing corpus for BM25...", flush=True)
         bm25_corpus = preprocess_corpus_for_bm25(self.df)
         self.bm25 = BM25Retriever(bm25_corpus)
 
-        print("Loading dense model …", flush=True)
+        print("Loading dense model...", flush=True)
         self.dense_model = load_embedding_model(MODEL_NAME)
 
-        print("Encoding jobs into dense embeddings …", flush=True)
+        print("Encoding jobs into dense embeddings...", flush=True)
         self.job_embeddings = build_job_embeddings(self.df, self.dense_model)
 
         self._indexed = True

@@ -3,10 +3,8 @@ import sys
 import pandas as pd
 
 _this_dir = os.path.dirname(os.path.abspath(__file__))
-_src_dir = os.path.join(_this_dir, "src")
-for _path in [_this_dir, _src_dir]:
-    if _path not in sys.path:
-        sys.path.insert(0, _path)
+if _this_dir not in sys.path:
+    sys.path.insert(0, _this_dir)
 
 from hybrid import HybridSearchEngine
 
@@ -15,7 +13,7 @@ DEFAULT_ALPHA = 0.5
 DEFAULT_TOP_K = 10
 
 def print_results(results: pd.DataFrame, query: str) -> None:
-    """Pretty-print ranked search results — only HybridScore, same as hybrid.py."""
+    """Pretty-print ranked search results, showing the hybrid score."""
     print(f"\n{'='*60}")
     print(f"Query: \"{query}\"")
     print(f"{'='*60}")
@@ -39,7 +37,7 @@ def print_results(results: pd.DataFrame, query: str) -> None:
     print(flush=True)
 
 def run_interactive(engine: HybridSearchEngine) -> None:
-    print("\nHybrid Job Search Engine — Interactive Mode")
+    print("\nHybrid Job Search Engine - Interactive Mode")
     print(f"Current alpha (BM25 weight): {engine.alpha}")
     print("Commands: 'alpha <0-1>' to change weight | 'exit' to quit\n")
 

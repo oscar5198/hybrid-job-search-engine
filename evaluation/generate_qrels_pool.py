@@ -1,7 +1,6 @@
 import os
 import sys
 import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
 
 # Project paths
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
@@ -58,15 +57,14 @@ for q in queries:
     pool_doc_ids = set(bm25_doc_ids + dense_doc_ids)
 
     for doc_id in pool_doc_ids:
-        # Use the correct column names from your CSV
-        row = df.loc[doc_id, ["Title", "ExperienceLevel", "YearsOfExperience",
+        row = df.loc[doc_id, ["JobID", "Title", "ExperienceLevel", "YearsOfExperience",
                               "Skills", "Responsibilities", "Keywords"]].to_dict()
         row["relevance"] = -1  # mark for manual labeling
         row["query_id"] = query_id
         qrels_pool.append(row)
 
 # Save candidate pool
-pool_path = os.path.join(os.path.dirname(__file__), "qrels_pool.csv")
+pool_path = os.path.join(os.path.dirname(__file__), "qrels_candidates.csv")
 df_pool = pd.DataFrame(qrels_pool)
 df_pool.to_csv(pool_path, index=False)
 print(f"Candidate pool saved to {pool_path}")

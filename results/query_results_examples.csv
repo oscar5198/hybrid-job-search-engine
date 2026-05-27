@@ -1,0 +1,151 @@
+Query,QueryText,Model,Rank,JobID,Title,ExperienceLevel,Relevant
+Q1,SQL developer,BM25,1,jd-java-011,Java Developer,Experienced,0
+Q1,SQL developer,BM25,2,jd-java-008,Java Developer,Fresher,0
+Q1,SQL developer,BM25,3,jd-java-005,Java Developer,Fresher,0
+Q1,SQL developer,BM25,4,jd-java-017,Java Developer,Experienced,0
+Q1,SQL developer,BM25,5,net-f-009,.NET Developer,Fresher,1
+Q1,SQL developer,Dense,1,sd005,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Dense,2,sd008,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Dense,3,sd004,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Dense,4,sd002,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Dense,5,sd003,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Hybrid,1,sd005,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Hybrid,2,sd004,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Hybrid,3,sd002,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Hybrid,4,sd008,Software Developer - Entry Level,Fresher,0
+Q1,SQL developer,Hybrid,5,net-f-007,.NET Developer,Fresher,1
+Q2,entry-level role building REST APIs in Python,BM25,1,sd008,Software Developer - Entry Level,Fresher,0
+Q2,entry-level role building REST APIs in Python,BM25,2,se-f8,Software Engineer - Entry Level,Fresher,1
+Q2,entry-level role building REST APIs in Python,BM25,3,se-f2,Software Engineer - Entry Level,Fresher,1
+Q2,entry-level role building REST APIs in Python,BM25,4,and-f-04,Entry-level Android Developer,Fresher,0
+Q2,entry-level role building REST APIs in Python,BM25,5,1,Backend Developer - Entry Level,Fresher,0
+Q2,entry-level role building REST APIs in Python,Dense,1,se-e13,Software Engineer - Experienced,Experienced,0
+Q2,entry-level role building REST APIs in Python,Dense,2,py-e-012,Python Developer,Experienced,0
+Q2,entry-level role building REST APIs in Python,Dense,3,se-e19,Software Engineer - Experienced,Experienced,0
+Q2,entry-level role building REST APIs in Python,Dense,4,py-e-013,Python Developer,Experienced,0
+Q2,entry-level role building REST APIs in Python,Dense,5,py-e-011,Python Developer,Experienced,0
+Q2,entry-level role building REST APIs in Python,Hybrid,1,se-f8,Software Engineer - Entry Level,Fresher,1
+Q2,entry-level role building REST APIs in Python,Hybrid,2,sd008,Software Developer - Entry Level,Fresher,0
+Q2,entry-level role building REST APIs in Python,Hybrid,3,1,Backend Developer - Entry Level,Fresher,0
+Q2,entry-level role building REST APIs in Python,Hybrid,4,se-e13,Software Engineer - Experienced,Experienced,0
+Q2,entry-level role building REST APIs in Python,Hybrid,5,8,Backend Developer - Entry Level,Fresher,0
+Q3,AI engineer,BM25,1,ai002,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,BM25,2,ai004,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,BM25,3,ai008,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,BM25,4,ai006,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,BM25,5,ai016,AI Engineer - Experienced,Senior-Level,1
+Q3,AI engineer,Dense,1,ai007,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,Dense,2,ai005,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,Dense,3,ai012,AI Engineer - Experienced,Senior-Level,1
+Q3,AI engineer,Dense,4,ai001,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,Dense,5,ai003,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,Hybrid,1,ai005,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,Hybrid,2,ai007,AI Engineer - Fresher,Entry-Level,1
+Q3,AI engineer,Hybrid,3,ai012,AI Engineer - Experienced,Senior-Level,1
+Q3,AI engineer,Hybrid,4,ai014,AI Engineer - Experienced,Senior-Level,1
+Q3,AI engineer,Hybrid,5,ai004,AI Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,BM25,1,se018,System Engineer - Cloud & Automation,Experienced,1
+Q4,cloud engineer with AWS and Docker,BM25,2,ca003,Junior Cloud Engineer,Fresher,0
+Q4,cloud engineer with AWS and Docker,BM25,3,cl018,Cloud Engineer - Experienced,Senior-Level,1
+Q4,cloud engineer with AWS and Docker,BM25,4,cl005,Cloud Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,BM25,5,cl003,Cloud Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,Dense,1,se018,System Engineer - Cloud & Automation,Experienced,1
+Q4,cloud engineer with AWS and Docker,Dense,2,cl002,Cloud Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,Dense,3,cl005,Cloud Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,Dense,4,cl009,Cloud Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,Dense,5,cl004,Cloud Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,Hybrid,1,se018,System Engineer - Cloud & Automation,Experienced,1
+Q4,cloud engineer with AWS and Docker,Hybrid,2,ca003,Junior Cloud Engineer,Fresher,0
+Q4,cloud engineer with AWS and Docker,Hybrid,3,cl002,Cloud Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,Hybrid,4,cl005,Cloud Engineer - Fresher,Entry-Level,1
+Q4,cloud engineer with AWS and Docker,Hybrid,5,cl003,Cloud Engineer - Fresher,Entry-Level,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,BM25,1,de-f-006,Data Engineer,Fresher,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,BM25,2,bds-f-007,Big Data Specialist,Fresher,0
+Q5,data pipeline engineer using ETL Hadoop and Spark,BM25,3,bds-f-001,Big Data Specialist,Fresher,0
+Q5,data pipeline engineer using ETL Hadoop and Spark,BM25,4,de-f-010,Data Engineer,Fresher,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,BM25,5,de-f-001,Data Engineer,Fresher,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,Dense,1,de-e-004,Data Engineer,Experienced,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,Dense,2,de-e-007,Data Engineer,Experienced,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,Dense,3,de-e-001,Data Engineer,Experienced,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,Dense,4,de-e-010,Data Engineer,Experienced,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,Dense,5,de-e-002,Data Engineer,Experienced,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,Hybrid,1,de-f-006,Data Engineer,Fresher,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,Hybrid,2,bds-f-007,Big Data Specialist,Fresher,0
+Q5,data pipeline engineer using ETL Hadoop and Spark,Hybrid,3,de-f-001,Data Engineer,Fresher,1
+Q5,data pipeline engineer using ETL Hadoop and Spark,Hybrid,4,bds-f-001,Big Data Specialist,Fresher,0
+Q5,data pipeline engineer using ETL Hadoop and Spark,Hybrid,5,de-f-010,Data Engineer,Fresher,1
+Q6,role designing wireframes and researching user journeys,BM25,1,uxf007,Junior UX Analyst,Fresher,1
+Q6,role designing wireframes and researching user journeys,BM25,2,uxf010,UX Design Intern,Fresher,1
+Q6,role designing wireframes and researching user journeys,BM25,3,uxf008,UX Apprentice,Fresher,1
+Q6,role designing wireframes and researching user journeys,BM25,4,uxf003,Associate UX Designer,Fresher,1
+Q6,role designing wireframes and researching user journeys,BM25,5,uxf009,UX Trainee Designer,Fresher,1
+Q6,role designing wireframes and researching user journeys,Dense,1,uxf007,Junior UX Analyst,Fresher,1
+Q6,role designing wireframes and researching user journeys,Dense,2,uxf001,UX Designer,Fresher,1
+Q6,role designing wireframes and researching user journeys,Dense,3,uxf003,Associate UX Designer,Fresher,1
+Q6,role designing wireframes and researching user journeys,Dense,4,pd-f-005,Product Designer,Fresher,0
+Q6,role designing wireframes and researching user journeys,Dense,5,uxf010,UX Design Intern,Fresher,1
+Q6,role designing wireframes and researching user journeys,Hybrid,1,uxf007,Junior UX Analyst,Fresher,1
+Q6,role designing wireframes and researching user journeys,Hybrid,2,uxf010,UX Design Intern,Fresher,1
+Q6,role designing wireframes and researching user journeys,Hybrid,3,uxf003,Associate UX Designer,Fresher,1
+Q6,role designing wireframes and researching user journeys,Hybrid,4,uxf008,UX Apprentice,Fresher,1
+Q6,role designing wireframes and researching user journeys,Hybrid,5,pd-f-005,Product Designer,Fresher,0
+Q7,automated testing with Selenium and API testing,BM25,1,sdet-f-013,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,BM25,2,sdet-f-012,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,BM25,3,sdet-f-015,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,BM25,4,sdet-f-014,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,BM25,5,sdet-f-005,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,Dense,1,ta012,Test Automation Engineer - Experienced,Senior-Level,0
+Q7,automated testing with Selenium and API testing,Dense,2,ta007,Test Automation Engineer - Fresher,Entry-Level,0
+Q7,automated testing with Selenium and API testing,Dense,3,ta017,Test Automation Engineer - Experienced,Senior-Level,0
+Q7,automated testing with Selenium and API testing,Dense,4,ta002,Test Automation Engineer - Fresher,Entry-Level,0
+Q7,automated testing with Selenium and API testing,Dense,5,ta006,Test Automation Engineer - Fresher,Entry-Level,0
+Q7,automated testing with Selenium and API testing,Hybrid,1,sdet-f-012,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,Hybrid,2,sdet-f-002,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,Hybrid,3,sdet-f-013,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,Hybrid,4,sdet-f-003,Software Tester (SDET),Fresher,1
+Q7,automated testing with Selenium and API testing,Hybrid,5,sdet-f-015,Software Tester (SDET),Fresher,1
+Q8,improve website traffic with keyword optimisation,BM25,1,ne008,Entry-Level Network Analyst,Fresher,0
+Q8,improve website traffic with keyword optimisation,BM25,2,seo-017,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,BM25,3,seo-011,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,BM25,4,seo-001,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,BM25,5,cw-002,Content Writer,Fresher,0
+Q8,improve website traffic with keyword optimisation,Dense,1,seo-001,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,Dense,2,seo-011,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,Dense,3,seo-013,SEO Specialist,Mid-Level,1
+Q8,improve website traffic with keyword optimisation,Dense,4,seo-017,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,Dense,5,seo-006,SEO Specialist,Experienced,1
+Q8,improve website traffic with keyword optimisation,Hybrid,1,seo-001,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,Hybrid,2,seo-011,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,Hybrid,3,seo-017,SEO Specialist,Fresher,1
+Q8,improve website traffic with keyword optimisation,Hybrid,4,seo-013,SEO Specialist,Mid-Level,1
+Q8,improve website traffic with keyword optimisation,Hybrid,5,cw-002,Content Writer,Fresher,0
+Q9,product owner managing roadmap user stories and analytics,BM25,1,pm-f-005,Product Manager,Fresher,1
+Q9,product owner managing roadmap user stories and analytics,BM25,2,pm-e-010,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,BM25,3,pm-e-014,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,BM25,4,pm-e-018,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,BM25,5,pm-e-012,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,Dense,1,pm-f-005,Product Manager,Fresher,1
+Q9,product owner managing roadmap user stories and analytics,Dense,2,pm-f-002,Product Manager,Fresher,1
+Q9,product owner managing roadmap user stories and analytics,Dense,3,pm-e-018,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,Dense,4,pm-e-014,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,Dense,5,pm-e-010,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,Hybrid,1,pm-f-005,Product Manager,Fresher,1
+Q9,product owner managing roadmap user stories and analytics,Hybrid,2,pm-e-014,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,Hybrid,3,pm-e-018,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,Hybrid,4,pm-e-010,Product Manager,Experienced,1
+Q9,product owner managing roadmap user stories and analytics,Hybrid,5,pm-e-008,Product Manager,Experienced,1
+Q10,machine learning role deploying models with Kubernetes,BM25,1,ds-f5,Junior Machine Learning Engineer,Fresher,0
+Q10,machine learning role deploying models with Kubernetes,BM25,2,ml-e1,Machine Learning Engineer - Experienced,Mid-Senior,1
+Q10,machine learning role deploying models with Kubernetes,BM25,3,ds-s4,Machine Learning Scientist,Senior,0
+Q10,machine learning role deploying models with Kubernetes,BM25,4,ds-s6,Lead Machine Learning Scientist,Senior,0
+Q10,machine learning role deploying models with Kubernetes,BM25,5,se-f8,Software Engineer - Entry Level,Fresher,0
+Q10,machine learning role deploying models with Kubernetes,Dense,1,ca007,Senior Cloud Architect,Experienced,0
+Q10,machine learning role deploying models with Kubernetes,Dense,2,ca012,Multi-Cloud Architect,Experienced,0
+Q10,machine learning role deploying models with Kubernetes,Dense,3,se019,System Engineer,Experienced,0
+Q10,machine learning role deploying models with Kubernetes,Dense,4,ca017,Enterprise Cloud Architect,Experienced,0
+Q10,machine learning role deploying models with Kubernetes,Dense,5,ml-s3,Principal Machine Learning Engineer,Senior,1
+Q10,machine learning role deploying models with Kubernetes,Hybrid,1,ml-e1,Machine Learning Engineer - Experienced,Mid-Senior,1
+Q10,machine learning role deploying models with Kubernetes,Hybrid,2,ml-s3,Principal Machine Learning Engineer,Senior,1
+Q10,machine learning role deploying models with Kubernetes,Hybrid,3,se-f8,Software Engineer - Entry Level,Fresher,0
+Q10,machine learning role deploying models with Kubernetes,Hybrid,4,ml-s2,Lead Machine Learning Engineer,Senior,1
+Q10,machine learning role deploying models with Kubernetes,Hybrid,5,ds-s5,Senior Machine Learning Engineer,Senior,0

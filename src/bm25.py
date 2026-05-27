@@ -2,9 +2,9 @@ import os
 import math
 from collections import defaultdict
 import pandas as pd
-from preprocessing import preprocess_corpus_for_bm25, preprocess_query, load_dataset, COLUMN_MAP
+from preprocessing import preprocess_corpus_for_bm25, preprocess_query, load_dataset
 
-dataset_path = os.path.join(os.path.dirname(__file__), "../data/job_dataset.csv")
+dataset_path = os.path.join(os.path.dirname(__file__), "..", "data", "job_dataset.csv")
 
 class BM25Retriever:
 
