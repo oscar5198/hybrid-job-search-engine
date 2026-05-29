@@ -22,6 +22,7 @@ data/        Job posting dataset
 src/         Retrieval and interactive search code
 evaluation/  Queries, relevance judgements, and evaluation scripts
 results/     Generated metrics and visualisations
+reports/     Final portfolio report
 ```
 
 ## Methodology
@@ -38,6 +39,8 @@ hybrid_score = alpha * BM25 + (1 - alpha) * Dense
 
 `alpha` is the BM25 weight. Higher `alpha` values place more emphasis on lexical matching; lower values place more emphasis on dense semantic similarity.
 
+![Hybrid retrieval architecture](results/hybrid_retrieval_architecture.png)
+
 ## Results
 
 | Model | P@5 | nDCG@10 | MRR |
@@ -51,6 +54,10 @@ BM25 achieved the best average nDCG@10, while Hybrid achieved the best P@5 and M
 ![Average retrieval metrics](results/average_metrics.png)
 
 ![nDCG by query](results/ndcg_by_query.png)
+
+## Report
+
+[Final portfolio report](reports/Hybrid_Job_Search_Engine_Portfolio_Report.pdf)
 
 ## How to Run
 

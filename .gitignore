@@ -4,7 +4,11 @@
 # Python cache / bytecode
 __pycache__/
 *.pyc
+.venv/
 
 # Optional editor files
 *.swp
 *.save
+
+# Local document render scratch
+report_rendered/
